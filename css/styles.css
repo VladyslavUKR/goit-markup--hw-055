@@ -419,8 +419,9 @@ span {
   align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: 250ms;
-  transition-timing-function: var(--trans-accent);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-item {
   width: 170px;
@@ -470,6 +471,9 @@ span {
   background: #f5f4fa;
   border-radius: 4px;
   border: 0cm;
+
+  transition: color var(--trans-accent), background var(--trans-accent),
+    box-shadow var(--trans-accent);
 }
 .page-btn.current {
   background-color: var(--accent-page-color);
@@ -506,6 +510,7 @@ span {
 }
 .about-rotfolio-link {
   display: block;
+  transition: box-shadow var(--trans-accent);
 }
 
 .about-rotfolio-link:hover,
